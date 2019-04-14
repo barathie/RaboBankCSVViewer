@@ -1,0 +1,17 @@
+<h1>ReboBank Report</h1>
+<div class="csv-file-chooser-section">
+
+  <input type="file" #fileImportInput name="File Upload" id="txtFileUpload" (change)="fileChangeListener($event)"
+         accept=".csv"/>
+</div>
+
+<div class="csv-file-display-section">
+  <ag-grid-angular 
+      style="width: auto; height: 300px;" 
+      class="ag-theme-balham"
+      enableFilter="true"
+      pagination="true"    
+      [rowData]="rowData" 
+      [columnDefs]="columnDefs">
+  </ag-grid-angular>
+</div>
